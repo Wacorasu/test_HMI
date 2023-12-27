@@ -1,0 +1,189 @@
+.container {
+    width: 100%;
+    max-width: 380px;
+    padding: 16px 30px 16px 30px;
+    box-sizing: border-box;
+    background-color: #D4F2DB80;
+    border-radius: 10px;
+    border: 1px solid #000;
+    overflow: hidden;
+    
+}
+
+.containerSelect {
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.30);
+}
+
+.containerSmall {
+    padding: 8px;
+    max-width: 110px;
+}
+
+.containerMedium {
+    padding: 16px 30px 16px 30px;
+    max-width: 332px;
+}
+
+.containerWarning {
+    background-color: #F8E4D680;
+}
+
+.containerAlarm {
+    background-color: #F6DEDE80;
+}
+
+.linkWrapper {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.linkWrapperSmall {
+    gap: 0;
+}
+
+.linkWrapperMedium {
+    gap: 5px;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-height: 28px;
+    font-family: 'Roboto';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000;
+}
+
+.titleSmall {
+    font-size: 16px;
+    max-height: 28px;
+}
+
+.titleMedium {
+    margin-bottom: 15px;
+}
+
+.subtitleContainer {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 5px;
+
+}
+
+.subtitleContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.subtitle {
+    color: #000;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.subtitleText {
+    width: 100%;
+    max-height: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.image {
+    margin: 10px 0 10px 0;
+    object-fit: contain;
+    width: 310px;
+    background-color: #EFF4FD;
+}
+
+.statusContainer {
+    width: 100%;
+    max-width: 265px;
+    padding-top: 14px;
+    margin-top: 5px;
+    border-top: 1px solid #000;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.statusContainerSmall {
+    padding-top: 5px;
+    max-width: 80px;
+    margin-top: 0;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.statusContainerMedium {
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.statusContentContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+}
+
+.statusText {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.statusConnectIcon {
+    width: 22px;
+    aspect-ratio: 1;
+}
+
+.statusConnectIconDisconnect {
+    fill: #FF8A8A;
+}
+
+.statusConnectIconConnect {
+    fill: #92DF56;
+}
+
+.statusPlantIcon {
+    width: 22px;
+    aspect-ratio: 1;
+}
+
+.statusWarringPlantIcon {
+    fill: #FFD18C;
+}
+
+.statusAlarmPlantIcon {
+    fill: #FF8A8A;
+}

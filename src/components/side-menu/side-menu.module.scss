@@ -1,0 +1,93 @@
+.container {
+    margin: 0;
+    padding: 0;
+    width: 145px;
+    height: 100%;
+    max-height: 800px;
+    background-color: #fff;
+    border-radius: 0 16px 16px 0;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.containerOpen {
+    width: 400px;
+}
+
+.headerContainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 0 16px 0 0;
+    padding: 12px 27px 16px 40px;
+    box-sizing: border-box;
+    background-color: #EEEEEE;
+}
+
+.headerContainerOpen {
+    justify-content: space-between;
+}
+
+.headerLabel {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-family: 'Roboto';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.buttonExpand {
+    width: 27px;
+    aspect-ratio: 1;
+    border: none;
+    background-image: url('../../image/icons/icon-arrow-horizontal.svg');
+    transform: rotate(0deg);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.buttonExpandOpen {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.buttonOpen {
+    width: 27px;
+    aspect-ratio: 1;
+    border: none;
+    background-image: url('../../image/icons/icon-open.svg');
+    transition: display 0.6s ease-in-out;
+
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.cardsContainer {
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}

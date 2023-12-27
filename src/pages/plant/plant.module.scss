@@ -1,0 +1,91 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    padding-top: 21px;
+    background-color: #EDF4FFCC;
+    background-image: radial-gradient(#d2d6db4b 5px, transparent 5px);
+    background-size: 35px 35px;
+}
+
+.sideMenu {
+    position: absolute;
+    left: 0;
+    top: 21px;
+}
+
+.console {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.modal {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 21px;
+    color: #000;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.buttonContainer {
+    position: absolute;
+    top: 33px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 26px;
+}
+
+.button {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 57px;
+    aspect-ratio: 1;
+    border: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 3px solid #000;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+    &:hover {
+        opacity: 0.7;
+        transform: scale(1.02);
+    }
+}
+
+.icon {
+    width: 25px;
+    aspect-ratio: 1;
+}
+
+.buttonAttention {
+    background-color: #FFD18C;
+}
+
+.buttonAlarm {
+    background-color: #FF8A8A;
+}
