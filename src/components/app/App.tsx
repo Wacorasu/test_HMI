@@ -3,7 +3,7 @@ import stylesApp from './App.module.css';
 import { Header } from '../header/header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from '../../pages/home/home';
-import { Plant } from '../../pages/plant/plant ';
+import { Plant } from '../../pages/plant/plant';
 import { NotFound } from '../../pages/not-found/not-found';
 
 const App: FC = (): JSX.Element => {

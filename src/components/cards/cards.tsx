@@ -4,10 +4,11 @@ import { FC } from 'react';
 import { ReactComponent as IconConnect } from '../../image/icons/icon-status-server.svg';
 import { ReactComponent as IconStatusPlant } from '../../image/icons/icon-status-plant.svg';
 import { ReactComponent as IconWarringStatusPlant } from '../../image/icons/icon-waring-status-plant.svg';
-import { ICard, PlantCardSize } from '../../services/types';
+import { ConnectStatus, ICard, PlantCardSize, PlantStatus, WarningStatus } from '../../services/types';
 
 export const Cards: FC<ICard> = ({
   info,
+  warningStatus,
   plantStatus,
   connect,
   select = false,
@@ -17,9 +18,9 @@ export const Cards: FC<ICard> = ({
   return (
     <article
       className={`${stylesCards.container} ${
-        plantStatus === 'attention' && stylesCards.containerWarning
+        plantStatus === PlantStatus.Attention && stylesCards.containerWarning
       } ${
-        (plantStatus === 'alarm' || connect === 'disconnect') &&
+        (plantStatus=== PlantStatus.Alarm || connect === ConnectStatus.Disconnect) &&
         stylesCards.containerAlarm
       }
       ${size === PlantCardSize.Small ? stylesCards.containerSmall : ''}
@@ -85,7 +86,7 @@ export const Cards: FC<ICard> = ({
             )}
             <IconConnect
               className={`${stylesCards.statusConnectIcon} ${
-                connect === 'disconnect'
+                connect === ConnectStatus.Disconnect
                   ? stylesCards.statusConnectIconDisconnect
                   : stylesCards.statusConnectIconConnect
               }`}
@@ -95,12 +96,12 @@ export const Cards: FC<ICard> = ({
             {size !== PlantCardSize.Small && (
               <span className={stylesCards.statusText}>соединение:</span>
             )}
-            {plantStatus === 'none' ? (
+            {warningStatus === WarningStatus.None ? (
               <IconStatusPlant className={stylesCards.statusPlantIcon} />
             ) : (
               <IconWarringStatusPlant
                 className={`${
-                  plantStatus === 'attention'
+                  warningStatus === WarningStatus.Attention
                     ? stylesCards.statusWarringPlantIcon
                     : stylesCards.statusAlarmPlantIcon
                 }`}

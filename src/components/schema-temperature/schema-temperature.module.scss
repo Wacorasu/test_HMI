@@ -1,0 +1,33 @@
+.temperatureContainer {
+    display: flex;
+    max-width: 200px;
+    gap: 5px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.temperatureIcon {
+    width: 30px;
+    aspect-ratio: 1;
+    fill: #9FD080;
+}
+
+.temperatureIconAttention {
+    fill: #FFD18C;
+}
+
+.temperatureIconAlarm {
+    fill: #FF8A8A;
+}
+
+.temperatureText {
+    color: #000;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

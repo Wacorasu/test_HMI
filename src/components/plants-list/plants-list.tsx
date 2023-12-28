@@ -84,6 +84,7 @@ export const PlantsList: FC<IPlantsList> = ({
               info={item.info}
               connect={item.connect}
               plantStatus={item.plantStatus}
+              warningStatus={item.warningStatus}
             />
           );
         })}

@@ -93,6 +93,7 @@
     justify-content: flex-start;
     align-items: center;
     text-decoration: none;
+    padding: 0 5px 0 5px;
     gap: 14px;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
@@ -100,6 +101,8 @@
         background-color: #eeeeeeec;
         opacity: 0.9;
         transform: scale(1.02);
+        border-radius: 5px;
+        
     }
 }
 

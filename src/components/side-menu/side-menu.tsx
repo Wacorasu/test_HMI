@@ -63,6 +63,7 @@ export const SideMenu: FC<ISideMenu> = ({
               info={item.info}
               connect={item.connect}
               plantStatus={item.plantStatus}
+              warningStatus={item.warningStatus}
             />
           );
         })}

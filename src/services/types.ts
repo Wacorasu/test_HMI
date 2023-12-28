@@ -3,8 +3,15 @@ export enum ConnectStatus {
   Disconnect = 'disconnect',
 }
 
-export enum PlantStatus {
+export enum WarningStatus {
   None = 'none',
+  Attention = 'attention',
+  Alarm = 'alarm',
+}
+
+export enum PlantStatus {
+  Work = 'work',
+  Off = 'off',
   Attention = 'attention',
   Alarm = 'alarm',
 }
@@ -14,6 +21,22 @@ export enum PlantCardSize {
   Medium = 'medium',
   Big = 'big',
 }
+
+export enum SchemaElement {
+  Boiler = 'boiler',
+  Pump = 'pump',
+  WaterLineIn = 'waterLineIn',
+  WaterLineOut = 'waterLineOut',
+  WaterLineSub = 'waterLineSub',
+  GasLine = 'gasLine',
+}
+
+export enum ValveStatus {
+    Open = 'open',
+    Close = 'Close'
+}
+
+
 
 export interface ICard {
   info: {
@@ -25,43 +48,59 @@ export interface ICard {
     image: string;
   };
   size: PlantCardSize;
-  plantStatus: PlantStatus;
+  warningStatus: WarningStatus;
   connect: ConnectStatus;
+  plantStatus: PlantStatus;
   select?: boolean;
 }
 
+export interface IPlantDataValue {
+  value: number;
+  valueStatus: WarningStatus;
+  unit: string;
+}
+
 export interface IDataBoiler {
-  status: string;
-  temperature: string;
-  fullness: string;
-  performance: string;
+  status: PlantStatus;
+  id: string;
+  name: string;
+  temperature: IPlantDataValue;
+  fullness: IPlantDataValue;
+  performance: IPlantDataValue;
   error: string;
 }
 
 export interface IDataPump {
-  status: string;
-  performance: string;
+  status: PlantStatus;
+  id: string;
+  name: string;
+  performance: IPlantDataValue;
   error: string;
 }
 
 export interface IDataLineWater {
-  status: string;
-  temperature: string;
-  pressure: string;
+  status: PlantStatus;
+  id: string;
+  name: string;
+  temperature: IPlantDataValue;
+  pressure: IPlantDataValue;
   error: string;
 }
 
 export interface IDataLineGas {
-  status: string;
-  pressure: string;
+  status: PlantStatus;
+  id: string;
+  name: string;
+  pressure: IPlantDataValue;
+  valve: {value: ValveStatus, valueStatus: WarningStatus}
   error: string;
 }
 
 export interface IInputData {
   id: string,
   name: string,
-  connect: boolean;
-  status: string;
+  connect: ConnectStatus;
+  status: PlantStatus;
   errorType: { code: string; text: string } | null;
   otherPlants: Omit<ICard, 'size'>[];
   currentPlant: {

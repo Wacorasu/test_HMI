@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# Прототип: Мнемокадр
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&random=false&width=435&lines=%D0%97%D0%B4%D0%B5%D1%81%D1%8C+%D0%B8+%D1%81%D0%B5%D0%B9%D1%87%D0%B0%D1%81!)](https://git.io/typing-svg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## О проекте
 
-## Available Scripts
+Прототип интерфейса дистанционного наблюдения за промышленными установками. Суть была в создании интуитивного, простого, но в тоже время информативного и функционального интерфейса, позволяющие быстро с ориентироваться с рабочим состоянием установок, но в тоже время и более подробно вникнуть в нюансы ее работы, это прототип, где реализованы основные элементы:
 
-In the project directory, you can run:
+### Функциональность
 
-### `npm start`
+- Просмотр схемы (заложена возможность взаимодействие с отдельными элементами) 
+- Основной интерфейс просмотра схемы, с возможностью навигации между установками и визуальной оценки их состояния 
+- Заложены возможность запрашивать более подробную информацию об установки, смотреть логи событий, графики, просмотр сырых данных
+- Прототип просмотра всех установок с возможностью фильтрации и так же первичной оценки их состояния
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Что будет еще
 
-### `npm test`
+- заглушки на доступные страницы для перехода
+- добавление еще пары визуальных анимированных элементов схемы
+- внедрение rudux и имитации работы с api
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Стэк
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- SCSS
+- headlessui
+  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Макет
+<a href="https://www.figma.com/file/ixRl3DBCNpQW8ahimKQBHR/HMI?type=design&node-id=21%3A433&mode=dev" target="_blank" rel="noopener noreferrer"><img  src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt='maket figma' /></a>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Запуск
+- Установка всех зависимостей: npm i
+- Запуск: npm run start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Ссылка на развернутое приложение 
+- https://wacorasu.github.io/test_HMI/

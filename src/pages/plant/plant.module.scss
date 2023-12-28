@@ -9,6 +9,92 @@
     background-color: #EDF4FFCC;
     background-image: radial-gradient(#d2d6db4b 5px, transparent 5px);
     background-size: 35px 35px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.schemaContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    @media screen and (max-height: 1000px) {
+        transform: scale(0.9);
+    }
+
+    .gusLine {
+        position: absolute;
+        left: 181px;
+        top: 14px;
+        z-index: 1;
+    }
+
+    .boiler01 {
+        position: absolute;
+        left: 630px;
+        top: 415px;
+        z-index: 3;
+    }
+
+    .boiler02 {
+        position: absolute;
+        left: 630px;
+        top: 616px;
+        z-index: 3;
+    }
+
+    .pumpMain01 {
+        position: absolute;
+        left: 967px;
+        top: 585px;
+        z-index: 3;
+    }
+
+    .pumpMain02 {
+        position: absolute;
+        left: 967px;
+        top: 705px;
+        flex-direction: column-reverse;
+        z-index: 3;
+    }
+
+    .waterLineIn {
+        position: absolute;
+        left: 574px;
+        top: 451px;
+        z-index: 2;
+    }
+
+    .waterLineOut {
+        position: absolute;
+        left: 858px;
+        top: 451px;
+        z-index: 2;
+    }
+
+    .waterLineSub {
+        position: absolute;
+        left: 1139px;
+        top: 383px;
+        z-index: 2;
+    }
+
+    .pumpSub01 {
+        position: absolute;
+        left: 1258px;
+        top: 324px;
+        z-index: 3;
+    }
+
+    .pumpSub02 {
+        display: flex;
+        flex-direction: column-reverse;
+        position: absolute;
+        left: 1258px;
+        top: 421px;
+        z-index: 3;
+    }
 }
 
 .sideMenu {
@@ -25,7 +111,7 @@
 
 .modal {
     position: absolute;
-    z-index: 3;
+    z-index: 6;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -33,7 +119,7 @@
 
 .title {
     position: absolute;
-    z-index: 1;
+    z-index: 4;
     left: 50%;
     transform: translate(-50%, 0);
     top: 21px;
@@ -55,6 +141,7 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 26px;
+    z-index: 5;
 }
 
 .button {

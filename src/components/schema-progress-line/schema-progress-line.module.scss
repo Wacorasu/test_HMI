@@ -1,0 +1,16 @@
+.progressVolumeLine {
+    width: 142px;
+    height: 23px;
+    border: 1px solid #000;
+}
+
+.progressVolumeValue {
+    color: #000;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
