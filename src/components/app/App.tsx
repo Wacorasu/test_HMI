@@ -8,7 +8,7 @@ import { NotFound } from '../../pages/not-found/not-found';
 
 const App: FC = (): JSX.Element => {
   return (
-    <HashRouter basename="/test_HMI">
+    <HashRouter >
       <div className={stylesApp.contentContainer}>
         <Header />
         <Routes>
